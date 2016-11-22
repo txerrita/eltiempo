@@ -1,4 +1,15 @@
 <h1>TU CIUDAD</h1>
 
-<input type="text" ng-model="ciudad" placeholder="Escribe una
+<input type="text" ng-model="ciudad" placeholder="Escribe una ciudad"/>
 <button ng-disabled="ciudad ==''" ng-click="buscarCiudad()">Buscar Ciudad</button>
+
+<hr>
+
+<div ng-hide="tiempo == ''">
+    <h1> El tiempo en {{tiempo.name}}</h1>
+    <img ng-src ="http://openweathermap.org/img/w/{{tiempo.weather[0].icon}}.png" />
+
+
+
+
+</div>
