@@ -1,6 +1,6 @@
 angular.module('eltiempo')
 
-    .controller('tiempo', function($scope, $http){
+    .controller('tiempo', function($scope, dataservice){
         //Comienzo declaracion
         $scope.ciudad ="";
         $scope.tiempo = "";
@@ -10,11 +10,10 @@ angular.module('eltiempo')
             console.log('buscar ciudad');
             
             //llamada a la api
-            var url = "http://api.openweathermap.org/data/2.5/weather?q="+$scope.ciudad+"&appid=1fea7bb734ba36400c5b8f22710e0d80";
-            $http.get(url) 
+            dataservice.getweather($scope.ciudad)
                 .success (function(result) {
+                    $scope.tiempo = result;
                     console.log(result);
-                    $scope.tiempo = result
                 })
                 .catch(function(error){
                     console.log(error)
