@@ -1,14 +1,18 @@
 <h1>TU CIUDAD</h1>
 
-<input type="text" ng-model="ciudad" placeholder="Escribe una ciudad"/>
-<button ng-disabled="ciudad ==''" ng-click="buscarCiudad()">Buscar Ciudad</button>
+<input class="btn btn-secondary btn-lg scroll" type="text" ng-model="ciudad" placeholder="Escribe una ciudad"/>
+<button class="btn btn-primary btn-lg scroll" ng-disabled="ciudad ==''" ng-click="buscarCiudad()">Buscar Ciudad</button>
 
-<hr>
+
 
 <div ng-hide="tiempo == ''">
     <h1> El tiempo en {{tiempo.name}}</h1>
-    <img ng-src ="http://openweathermap.org/img/w/{{tiempo.weather[0].icon}}.png" />
-
+    <img ng-src ="http://openweathermap.org/img/w/{{tiempo.weather[0].icon}}.png" width="100px"/><h2>{{tiempo.weather[0].description}}</h2>
+    <hr>
+    <p><h2>Temperatura: {{tiempo.main.temp}}º</h2></p>
+    <p><h2>Máxima: {{tiempo.main.temp_max}}º </h2><h2>Mínima: {{tiempo.main.temp_min}}º</h2></p>
+    <hr>
+    <p><h2>Humedad: {{tiempo.main.humidity}}%</h2></p>
 
 
 

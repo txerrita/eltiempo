@@ -17,7 +17,9 @@ angular.module('eltiempo')
                 })
                 .catch(function(error){
                     console.log(error)
-                })
+                });
+
+            $scope.ciudad="";
 
         }
     });

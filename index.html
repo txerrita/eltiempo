@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<!-- Styles -->
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/animate.css">
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
 </head>
 <body ng-app="eltiempo">
-<h1>El tiempo</h1>
-<div ng-view=""></div>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <a href="index.html"><img src="assets/img/logo.svg" alt="Logo"></a>
+            </div>
+            <!--<div class="col-xs-6 signin text-right navbar-nav">-->
+                <!--<a href="#/" class="scroll">Inicio</a>&nbsp; &nbsp;<a href="#/tiempo">El tiempo</a>-->
+            <!--</div>-->
+        </div>
+
+        <div class="row header-info">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+                <h1 class="wow fadeIn">¿Qué tiempo hace en tu ciudad?</h1>
+                <br />
+                <p class="lead wow fadeIn" data-wow-delay="0.5s">Entra en el BUSCADOR<br>
+                    y mira el tiempo que hace en tu ciudad</p>
+                <br />
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-xs-6 text-right wow fadeInUp" data-wow-delay="1s">
+                                <a href="#/" class="btn btn-secondary btn-lg scroll">Inicio</a>
+                            </div>
+                            <div class="col-xs-6 text-left wow fadeInUp" data-wow-delay="1.4s">
+                                <a href="#/tiempo" class="btn btn-primary btn-lg scroll">El tiempo</a>
+                            </div>
+                        </div><!--End Button Row-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="contenido" ng-view=""></div>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -20,6 +64,13 @@
 
 <!--Servicios-->
 <script src="app/services/dataservice.js"></script>
+
+<!--Assets-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<!--<script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.0.min.js"><\/script>')</script>-->
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
